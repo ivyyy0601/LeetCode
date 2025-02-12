@@ -4,9 +4,9 @@ class Solution(object):#[left,right]
         right=len(nums)
         while left<=right:
             middle=(left+right)//2
-            if nums[middle]>target:
+            if (nums[middle]>target):
                 right=middle-1
-            elif nums[middle]<target:
+            elif (nums[middle]<target):
                 left=middle+1
             else:
                 return middle
