@@ -10,7 +10,7 @@ class MyLinkedList:
         self.size = 0
     
     def get(self, index: int) -> int:
-        if index<0 or index>=self.size:
+        if index<0 or index>=self.size:  # self.size - 1 时，表示删除链表的最后一个节点
             return -1
         cur=self.dummy_head.next #cur就和原来一样了
         while index>0:  #假设是0
@@ -29,7 +29,7 @@ class MyLinkedList:
     def addAtTail(self, val: int) -> None:
         new=ListNode(val)
         cur=self.dummy_head.next #cur就和原来一样了
-        while  cur.next != None:
+        while  cur.next is not None:
             cur=cur.next
         cur.next= new
         self.size+=1
@@ -37,8 +37,8 @@ class MyLinkedList:
 
     def addAtIndex(self, index: int, val: int) -> None:
         new=ListNode(val)
-        if index<0 and index>=self.size:
-            return 
+        if index<0 and index>self.size:  #(!!!!n之前加！！！ 所以可以是末端+1
+            return  
         cur=self.dummy_head #cur就和原来一样了 但是这个了不是head
         while index>0:  #假设是0
             cur=cur.next
@@ -48,7 +48,7 @@ class MyLinkedList:
         self.size+=1
 
     def deleteAtIndex(self, index: int) -> None:
-        if index<0 and index>=self.size:
+        if index<0 and index>=self.size:  # self.size - 1 时，表示删除链表的最后一个节点
             return 
         cur=self.dummy_head
         while index>0:  #假设是0
