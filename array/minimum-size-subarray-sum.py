@@ -1,5 +1,5 @@
-class Solution(object):#滑动窗口
-    def minSubArrayLen(self, target, nums):
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         i=0
         j=0
         sum_re=0
@@ -15,4 +15,4 @@ class Solution(object):#滑动窗口
         else:
             return result
         # return result if result != float('inf') else 0 
-                
+        
