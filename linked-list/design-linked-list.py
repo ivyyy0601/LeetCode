@@ -48,7 +48,7 @@ class MyLinkedList:
         self.size+=1
 
     def deleteAtIndex(self, index: int) -> None:
-        if index<0 and index>=self.size:  # self.size - 1 时，表示删除链表的最后一个节点
+        if index<0 or index>=self.size:  # self.size - 1 时，表示删除链表的最后一个节点
             return 
         cur=self.dummy_head
         while index>0:  #假设是0
