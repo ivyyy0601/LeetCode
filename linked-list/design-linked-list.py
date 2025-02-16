@@ -37,7 +37,7 @@ class MyLinkedList:
 
     def addAtIndex(self, index: int, val: int) -> None:
         new=ListNode(val)
-        if index<0 and index>self.size:  #(!!!!n之前加！！！ 所以可以是末端+1
+        if index<0 or index>self.size:  #(!!!!n之前加！！！ 所以可以是末端+1
             return  
         cur=self.dummy_head #cur就和原来一样了 但是这个了不是head
         while index>0:  #假设是0
