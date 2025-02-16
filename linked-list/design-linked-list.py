@@ -28,7 +28,7 @@ class MyLinkedList:
 
     def addAtTail(self, val: int) -> None:
         new=ListNode(val)
-        cur=self.dummy_head.next #cur就和原来一样了
+        cur=self.dummy_head #cur就和原来一样了
         while cur.next is not None:
             cur=cur.next
         cur.next= new
