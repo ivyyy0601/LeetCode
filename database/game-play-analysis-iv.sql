@@ -8,6 +8,5 @@ from Activity
 where games_played != 0
 group by player_id)
 and games_played !=0
-group by player_id
 
 #COUNT() 里面不能直接塞一个 SELECT 子查询。
