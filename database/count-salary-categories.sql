@@ -7,3 +7,5 @@ from Accounts
 union all
 select 'High Salary' as category, sum(income > 50000) as accounts_count
 from Accounts
+
+#JOIN 横着拼列；UNION 竖着叠行。
