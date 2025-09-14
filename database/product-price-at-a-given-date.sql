@@ -15,6 +15,7 @@ or (product_id,change_date) in
 (
     select product_id, change_date
     from Products
+    where change_date > '2019-08-16'
     group by product_id
-    having change_date > '2019-08-16' 
+    having count(product_id)=1 
 )
