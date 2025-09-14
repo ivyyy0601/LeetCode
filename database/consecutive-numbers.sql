@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-select l1.num as ConsecutiveNums
+select distinct l1.num as ConsecutiveNums #zy 
 from Logs l1 
 join Logs l2 on l1.num=l2.num
 join Logs l3 on l2.num=l3.num
