@@ -22,5 +22,3 @@ or (product_id,change_date) in
         where change_date <= '2019-08-16'
     )
 )
-
-
