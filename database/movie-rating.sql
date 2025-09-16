@@ -12,5 +12,6 @@ union all
 from Movies join  MovieRating
 on Movies.movie_id = MovieRating.movie_id
 where DATE_FORMAT(MovieRating.created_at, '%Y-%m') = '2020-02'
-order by MovieRating.rating DESC, Movies.title ASC #desc是从高到低。asc低到高
+group by Movies.title
+order by avg(MovieRating.rating) DESC, Movies.title ASC #desc是从高到低。asc低到高
 limit 1 )
