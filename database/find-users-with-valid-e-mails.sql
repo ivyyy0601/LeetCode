@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-select user_id, name, mail
-from Users
-where mail REGEXP  '^[a-zA-Z][a-zA-Z0-9_.-]@leetcode\\.com$'
-#：REGEXP BINARY（强制大小写敏感）
+
+SELECT *
+FROM Users
+WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_\.\-]*@leetcode(\\?com)?\\.com$';
