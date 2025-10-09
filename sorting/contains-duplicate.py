@@ -11,5 +11,7 @@ class Solution:
         #         return True
         # return False
         #用set快很多
+        if nums is None or len(nums)==0:
+            return False
         s=set(nums)
         return len(s) != len(nums)
