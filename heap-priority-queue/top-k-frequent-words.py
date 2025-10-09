@@ -7,14 +7,8 @@ class Solution:
         heap=[]
         for key, value in mapping.items():
             heapq.heappush(heap, (-value,key))
-            if len(heap)>k:
-                heapq.heappop(heap) #但是 Python 没有内置最大堆，只有最小堆. pop出最小的value即最大value
-
-        res=[]
-        while len(heap)>0:
-            res.append(heapq.heappop(heap)[1]) 
-
-        res.reverse()
+           
+        res = [heapq.heappop(heap)[1] for _ in range(k)]  #频率越大 → -value 越小 → 越早被 pop 出
 
         return res
         
