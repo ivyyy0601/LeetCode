@@ -16,7 +16,9 @@ class Solution:
                         return True
                     else:
                         return False
-            if len(stack)==0:
-                return False
+        if len(stack)==0:
+            return True
+        else:
+            return False
 
         
