@@ -5,7 +5,7 @@ class Solution(object):
         l=0
         r=len(nums)-1
         mid=r+l/2
-        while r>l:
+        while r>=l:
             mid=r+l/2
             if nums[mid]==target:
                 return mid
