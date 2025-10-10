@@ -4,9 +4,8 @@ class Solution(object):
             return -1
         l=0
         r=len(nums)-1
-        mid=r+l/2
-        while r>=l:
-            mid=r+l/2
+        while r>=l:  #要注意这个 如果只有一个的时候 为0的时候
+            mid = (r + l) // 2 #索引必须是整数
             if nums[mid]==target:
                 return mid
             elif nums[mid]>target:
