@@ -27,13 +27,6 @@ class Solution:
                 left=rm+1 #这时候rr就是最小的
         return False
 
-
-
-
-
-        
-
-        return False
-                
+#
                 
         
