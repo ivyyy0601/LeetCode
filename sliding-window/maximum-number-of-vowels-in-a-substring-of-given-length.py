@@ -24,7 +24,7 @@ class Solution:
                 count+=1
             if s[left] in vowels:
                 count-=1
-            left+=1
+            left=right-k+1
             result=max(result,count)
         return result
             
