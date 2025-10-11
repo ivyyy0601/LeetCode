@@ -31,4 +31,6 @@ class Solution:
                     right_count+=1
             if left_count>=right_count:
                 return left_mar
+            else:
+                return right_mar
         return getmaj(0,len(nums)-1)
