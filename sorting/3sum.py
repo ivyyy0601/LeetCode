@@ -6,7 +6,7 @@ class Solution:
         res=[]
         for i in range(n-2): #保留n-1和n-2两个元素
             target=nums[i]
-            if i>=1 and target== nums[i-1]:
+            if i>=1 and target== nums[i-1]: #如果对于就没有可以跳过了
                 continue
             #这里优化：
             if target+nums[i+1]+nums[i+2]>0: #因为已经排好序了！！+最小的两个
@@ -19,21 +19,18 @@ class Solution:
             right=n-1
             
             while left<right:
-                sum=target+nums[left]+nums[right]
-                if sum< 0:
+                s=target+nums[left]+nums[right]
+                if s< 0:
                     left+=1
-                elif sum>0:
+                elif s>0:
                     right-=1
                 else:
                     res.append([target,nums[left],nums[right]])
                     left+=1
                     right-=1
                     # # 跳过 相邻重复！！！！！！！！！！所以前面要sort！！！ 不补上
-                    while nums[left]==nums[left-1] and left<right : #这个要补上！！
+                    while   left<right and nums[left]==nums[left-1]: #这个要补上！！
                         left+=1
-                    while nums[right]==nums[right+1] and left<right:
-                        right-1
+                    while left<right and nums[right]==nums[right+1]  :
+                        right=-1
         return res
-                
-
-        
