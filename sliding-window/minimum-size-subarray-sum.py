@@ -9,10 +9,11 @@ class Solution:
         for right in range(len(nums)):
             sum_res+=nums[right]
             while sum_res>=target:
-                left+=1
-                sum_res-=nums[left]
                 cur_len=right-left+1
                 ans=min(cur_len,ans)
+                sum_res-=nums[left] #顺序 是要先减掉他
+                left+=1
+                
                     
         if ans==len(nums)+1:
             return 0
