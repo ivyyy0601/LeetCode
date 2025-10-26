@@ -21,7 +21,7 @@ class Solution:
         # return max(self.maxDepth(root.left),self.maxDepth(root.right))+1
         #用bfs也可以 就是要queue
         if not root:
-            return 1
+            return 0
         #初始化
         max_depth=0 #一个节点就是1了
         queue=deque()
